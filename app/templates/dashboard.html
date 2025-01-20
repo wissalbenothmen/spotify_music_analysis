@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard">
+    <h2>Dashboard</h2>
+    <div class="stats">
+        <div class="stat-box">
+            <h3>Total Tracks</h3>
+            <p>{{ total_tracks }}</p>
+        </div>
+        <div class="stat-box">
+            <h3>Average Popularity</h3>
+            <p>{{ avg_popularity }}</p>
+        </div>
+        <div class="stat-box">
+            <h3>Average Duration (ms)</h3>
+            <p>{{ avg_duration }}</p>
+        </div>
+    </div>
+    <section class="charts mt-4">
+        <div class="row">
+            {% if plots %}
+                {% for plot in plots %}
+                    <div class="col-lg-6">
+                        <div class="chart-container rounded-2 p-3">
+                            <h3 class="fs-6 mb-3">{{ plot.title }}</h3>
+                            <img src="{{ plot.image }}" alt="{{ plot.title }}" class="img-fluid">
+                            <p>{{ plot.interpretation }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No data available.</p>
+            {% endif %}
+        </div>
+    </section>
+</div>
+{% endblock %}

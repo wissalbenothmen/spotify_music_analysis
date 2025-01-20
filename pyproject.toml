@@ -1,0 +1,28 @@
+[project]
+name = "spotify-music-analysis"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "wissalbenothmen",email = "wissal.lpeople@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "flask (>=3.1.0,<4.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "plotly (>=5.24.1,<6.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "matplotlib (>=3.10.0,<4.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)",
+    "pytest (>=8.3.4,<9.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-mock = "^3.14.0"
+

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="intro">
+    <h2>Welcome to Spotify Music Analysis</h2>
+    <p>This application helps you determine which style of music maximizes the number of sales for a music production company.</p>
+    <a href="{{ url_for('main.dashboard') }}" class="btn btn-primary">Go to Dashboard</a>
+</div>
+{% endblock %}
