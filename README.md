@@ -93,7 +93,8 @@ This will guide you through creating a pyproject.toml file. You can accept the d
 Use Poetry to install the required dependencies:
 
 ```bash
-poetry install```
+poetry install
+```
 This will:
 
 Create a virtual environment managed by Poetry (if one doesn’t already exist).
