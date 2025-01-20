@@ -80,25 +80,34 @@ git clone https://github.com/wissalbenothmen/spotify_music_analysis.git
 cd spotify_music_analysis
 ```
 
-### 2. Set Up a Virtual Environment
+### 2. Initialize and Set Up Poetry
 
-If you're using Poetry, it will handle the virtual environment for you. Otherwise, you can create one manually:
+If you haven't already initialized Poetry for your project, run the following command:
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+poetry init
 ```
+This will guide you through creating a pyproject.toml file. You can accept the default options or customize them as needed.
 
-### 3. Install Dependencies
-
+###3. Install Dependencies
 Use Poetry to install the required dependencies:
 
 ```bash
-poetry install
+poetry install```
+This will:
+
+Create a virtual environment managed by Poetry (if one doesn’t already exist).
+
+Install all the dependencies listed in pyproject.toml.
+
+4. Activate the Poetry Shell
+To activate the virtual environment created by Poetry, run:
+
+```bash
+poetry shell
 ```
 
-This will install all the dependencies listed in `pyproject.toml`.
-
+This will spawn a new shell with the virtual environment activated. You can now run Python commands and scripts within this environment.
 ---
 
 ## Running the Application
