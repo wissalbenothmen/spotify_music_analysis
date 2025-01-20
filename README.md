@@ -1,47 +1,42 @@
-Here’s a **well-documented `README.md`** for your Flask application. It includes step-by-step instructions for setting up the project, running it, and understanding its structure. You can copy and paste this into your `README.md` file.
 
----
-
-```markdown
 # Spotify Music Analysis - Flask Application
 
 This is a Flask web application for analyzing Spotify music data. It provides visualizations and insights into a dataset of Spotify tracks, including genre popularity, energy vs. tempo, danceability distribution, and more.
 
 ## Project Structure
 
-```
+```plaintext
 spotify_music_analysis/
+├── app/                             # Dossier principal de l'application
+│   ├── __init__.py                  # Fonction d'usine pour initialiser l'application Flask
+│   ├── routes.py                    # Définition des routes de l'application
+│   ├── templates/                   # Modèles HTML pour le rendu des pages
+│   │   ├── base.html                # Layout de base pour toutes les pages
+│   │   ├── index.html               # Page d'accueil
+│   │   ├── dashboard.html           # Page avec les visualisations
+│   │   ├── data.html                # Page affichant les données brutes
+│   ├── static/                      # Ressources statiques (CSS, JS, images)
+│   │   ├── style.css                # Feuille de style CSS
+│   │   ├── script.js                # Fichier JavaScript (interactions éventuelles)
+│   ├── utils/                       # Modules utilitaires pour réutiliser du code
+│   │   ├── data_loader.py           # Fonctions pour télécharger et charger les données
+│   ├── visualizations/              # Logique liée aux visualisations
+│       ├── plot_utils.py            # Génération des graphiques
 │
-├── app/                             # Main application folder
-│   ├── __init__.py                  # App factory function
-│   ├── routes.py                    # Defines app routes
-│   ├── templates/                   # HTML templates for rendering views
-│   │   ├── base.html                # Base layout for all pages
-│   │   ├── index.html               # Home page
-│   │   ├── dashboard.html           # Dashboard page for visualizations
-│   │   ├── data.html                # Data page to display raw data
-│   ├── static/                      # Static assets (CSS, JS, images)
-│   │   ├── style.css                # Stylesheet for the app
-│   │   ├── script.js                # JavaScript (if needed for interaction)
-│   ├── utils/                       # Utility modules for reusable code
-│       ├── data_loader.py           # Functions for downloading/loading data
-│   ├── visualizations/              # Subfolder for visualization logic
-│       ├── plot_utils.py            # Generates visualizations
+├── data/                            # Dossier pour les datasets téléchargés
+│   ├── spotify_tracks.csv           # Dataset Spotify (téléchargé automatiquement)
 │
-├── data/                            # Folder to store downloaded datasets
-│   ├── spotify_tracks.csv           # Spotify dataset (downloaded automatically)
+├── tests/                           # Tests unitaires pour le projet
+│   ├── __init__.py                  # Marque le dossier comme un package
+│   ├── test_data_loader.py          # Tests pour les fonctions de chargement de données
+│   ├── test_plot_utils.py           # Tests pour les fonctions de visualisation
 │
-├── tests/                           # Folder for test cases
-│   ├── __init__.py                  # Marks the folder as a package
-│   ├── test_data_loader.py          # Tests for data loading functions
-│   ├── test_plot_utils.py           # Tests for visualization functions
-│
-├── poetry.lock                      # Poetry lockfile for dependencies
-├── pyproject.toml                   # Poetry configuration for the project
-├── README.md                        # Project documentation
-└── run.py                           # Entry point to run the Flask app
-```
+├── poetry.lock                      # Fichier de verrouillage des dépendances Poetry
+├── pyproject.toml                   # Configuration Poetry pour le projet
+├── README.md                        # Documentation du projet
+└── run.py                           # Point d'entrée pour exécuter l'application Flask
 
+```
 ---
 
 ## Features
@@ -85,25 +80,35 @@ git clone https://github.com/wissalbenothmen/spotify_music_analysis.git
 cd spotify_music_analysis
 ```
 
-### 2. Set Up a Virtual Environment
+### 2. Initialize and Set Up Poetry
 
-If you're using Poetry, it will handle the virtual environment for you. Otherwise, you can create one manually:
+If you haven't already initialized Poetry for your project, run the following command:
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+poetry init
 ```
+This will guide you through creating a pyproject.toml file. You can accept the default options or customize them as needed.
 
 ### 3. Install Dependencies
-
 Use Poetry to install the required dependencies:
 
 ```bash
 poetry install
 ```
+This will:
 
-This will install all the dependencies listed in `pyproject.toml`.
+Create a virtual environment managed by Poetry (if one doesn’t already exist).
 
+Install all the dependencies listed in pyproject.toml.
+
+### 4. Activate the Poetry Shell
+To activate the virtual environment created by Poetry, run:
+
+```bash
+poetry shell
+```
+
+This will spawn a new shell with the virtual environment activated. You can now run Python commands and scripts within this environment.
 ---
 
 ## Running the Application
@@ -204,14 +209,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 Enjoy exploring the Spotify dataset with this Flask app! 🎵
-```
-
----
-
-### How to Use This README
-
-1. Copy the entire content above into a file named `README.md` in the root of your project.
-2. Replace `your-username` in the clone URL with your actual GitHub username (if applicable).
-3. Customize the sections (e.g., Acknowledgments, License) as needed.
-
-This README provides clear instructions for setting up, running, and understanding your Flask application. It’s designed to be user-friendly and comprehensive. Let me know if you need further assistance! 🚀
