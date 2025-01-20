@@ -7,12 +7,33 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar-heading {
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .logo-container img {
+            max-width: 70px; /* Adjust logo size */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .logo-container {
+            padding: 15px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">Wissal Ben Othmen Licence </div>
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1200px-Spotify_logo_without_text.svg.png" alt="Spotify Logo">
+            </div>
+            <div class="sidebar-heading">Wissal Ben Othmen Licence</div>
             <div class="list-group list-group-flush">
                 <a href="{{ url_for('main.index') }}" class="list-group-item list-group-item-action bg-light">Home</a>
                 <a href="{{ url_for('main.dashboard') }}" class="list-group-item list-group-item-action bg-light">Dashboard</a>

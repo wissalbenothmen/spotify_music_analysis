@@ -25,6 +25,6 @@ def dashboard():
 def data():
     df = load_data()
     if df is not None:
-        data = df.to_dict(orient='records')
+        data = df.to_dict(orient='records')  # Convert DataFrame to a list of dictionaries
         return render_template('data.html', data=data)
     return render_template('data.html', data=[])
