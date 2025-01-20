@@ -7,34 +7,34 @@ This is a Flask web application for analyzing Spotify music data. It provides vi
 
 spotify_music_analysis/
 │
-├── app/                             # Main application folder
-│   ├── __init__.py                  # App factory function
-│   ├── routes.py                    # Defines app routes
-│   ├── templates/                   # HTML templates for rendering views
-│   │   ├── base.html                # Base layout for all pages
-│   │   ├── index.html               # Home page
-│   │   ├── dashboard.html           # Dashboard page for visualizations
-│   │   ├── data.html                # Data page to display raw data
-│   ├── static/                      # Static assets (CSS, JS, images)
-│   │   ├── style.css                # Stylesheet for the app
-│   │   ├── script.js                # JavaScript (if needed for interaction)
-│   ├── utils/                       # Utility modules for reusable code
-│       ├── data_loader.py           # Functions for downloading/loading data
-│   ├── visualizations/              # Subfolder for visualization logic
-│       ├── plot_utils.py            # Generates visualizations
+├── app/                             # Dossier principal de l'application
+│   ├── __init__.py                  # Fonction d'usine pour initialiser l'application Flask
+│   ├── routes.py                    # Définition des routes de l'application
+│   ├── templates/                   # Modèles HTML pour le rendu des pages
+│   │   ├── base.html                # Layout de base pour toutes les pages
+│   │   ├── index.html               # Page d'accueil
+│   │   ├── dashboard.html           # Page avec les visualisations
+│   │   ├── data.html                # Page affichant les données brutes
+│   ├── static/                      # Ressources statiques (CSS, JS, images)
+│   │   ├── style.css                # Feuille de style CSS
+│   │   ├── script.js                # Fichier JavaScript (interactions éventuelles)
+│   ├── utils/                       # Modules utilitaires pour réutiliser du code
+│   │   ├── data_loader.py           # Fonctions pour télécharger et charger les données
+│   ├── visualizations/              # Logique liée aux visualisations
+│       ├── plot_utils.py            # Génération des graphiques
 │
-├── data/                            # Folder to store downloaded datasets
-│   ├── spotify_tracks.csv           # Spotify dataset (downloaded automatically)
+├── data/                            # Dossier pour les datasets téléchargés
+│   ├── spotify_tracks.csv           # Dataset Spotify (téléchargé automatiquement)
 │
-├── tests/                           # Folder for test cases
-│   ├── __init__.py                  # Marks the folder as a package
-│   ├── test_data_loader.py          # Tests for data loading functions
-│   ├── test_plot_utils.py           # Tests for visualization functions
+├── tests/                           # Tests unitaires pour le projet
+│   ├── __init__.py                  # Marque le dossier comme un package
+│   ├── test_data_loader.py          # Tests pour les fonctions de chargement de données
+│   ├── test_plot_utils.py           # Tests pour les fonctions de visualisation
 │
-├── poetry.lock                      # Poetry lockfile for dependencies
-├── pyproject.toml                   # Poetry configuration for the project
-├── README.md                        # Project documentation
-└── run.py                           # Entry point to run the Flask app
+├── poetry.lock                      # Fichier de verrouillage des dépendances Poetry
+├── pyproject.toml                   # Configuration Poetry pour le projet
+├── README.md                        # Documentation du projet
+└── run.py                           # Point d'entrée pour exécuter l'application Flask
 
 ---
 
