@@ -5,8 +5,8 @@ This is a Flask web application for analyzing Spotify music data. It provides vi
 
 ## Project Structure
 
+```plaintext
 spotify_music_analysis/
-│
 ├── app/                             # Dossier principal de l'application
 │   ├── __init__.py                  # Fonction d'usine pour initialiser l'application Flask
 │   ├── routes.py                    # Définition des routes de l'application
@@ -35,6 +35,7 @@ spotify_music_analysis/
 ├── pyproject.toml                   # Configuration Poetry pour le projet
 ├── README.md                        # Documentation du projet
 └── run.py                           # Point d'entrée pour exécuter l'application Flask
+
 
 ---
 
