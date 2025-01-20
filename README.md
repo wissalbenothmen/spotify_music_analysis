@@ -89,7 +89,7 @@ poetry init
 ```
 This will guide you through creating a pyproject.toml file. You can accept the default options or customize them as needed.
 
-###3. Install Dependencies
+### 3. Install Dependencies
 Use Poetry to install the required dependencies:
 
 ```bash
@@ -101,7 +101,7 @@ Create a virtual environment managed by Poetry (if one doesn’t already exist).
 
 Install all the dependencies listed in pyproject.toml.
 
-4. Activate the Poetry Shell
+### 4. Activate the Poetry Shell
 To activate the virtual environment created by Poetry, run:
 
 ```bash
