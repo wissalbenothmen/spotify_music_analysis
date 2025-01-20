@@ -36,7 +36,7 @@ spotify_music_analysis/
 ├── README.md                        # Documentation du projet
 └── run.py                           # Point d'entrée pour exécuter l'application Flask
 
-
+```
 ---
 
 ## Features
